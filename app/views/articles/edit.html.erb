@@ -1,0 +1,23 @@
+<%= form_with scope: :article, url: @article, method: :put, local: true do |f| %>
+
+    <div class="container">
+      <h3>Add Post</h3>
+  
+      <div class="mb-3">
+        <%= f.label :title, class:"form-label" %>
+        <%= f.text_field :title, placeholder:"Title"%>
+        <%# <input type="text"  placeholder="Title"> %>
+      </div>
+  
+      <div class="mb-3">
+        <%= f.label :comment, class:"form-label" %>
+        <%= f.text_area :body, placeholder:"Comment", rows:"3"%>
+        <%# <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> %>
+      </div>
+  
+      <div>
+        <%= f.submit %>
+      </div>
+    </div>
+  
+  <% end %>

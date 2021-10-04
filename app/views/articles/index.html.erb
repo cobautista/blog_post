@@ -1,0 +1,13 @@
+<h1>Hello Index</h1>
+
+<%= link_to "create a post", new_article_path%>
+
+<%@articles.each do |p| %>
+    
+    <h1>Title: <%= p.title%></h1>
+    <h3>Body: <%= p.body%></h3>
+
+    <%= link_to "show", article_path(p)%>
+    <%= link_to "update", edit_article_path(p)%>
+    <%= link_to "delete", article_path(p), method: :delete, data: {Confirm: 'Are you sure?'}%>
+<%end%>
